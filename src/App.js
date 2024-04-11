@@ -5,7 +5,7 @@ import MainBody from "./components/MainBody";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="relative flex flex-col bg-black">
       {/* header */}
       <Header/>
       {/* central */}

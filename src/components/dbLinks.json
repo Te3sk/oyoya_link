@@ -1,0 +1,12 @@
+{
+    "Oyoya_party" : {
+        "title" : "Oyoya Party: Flipper & Friend",
+        "link" : "https://open.spotify.com/playlist/67BNVw2n4VVprcukhXIUMP?si=5b7244e161304460",
+        "img_path" : "assets/playlist_img/oyoya_party_img.jpg" 
+    },
+    "End_fossil" : {
+        "title" : "Oyoya x Exploit: End Fossil",
+        "link" : "https://open.spotify.com/playlist/1t0X3GBOBCL3TV0vwn0gCo?si=17fa4709cd67467c",
+        "img_path" : "assets/playlist_img/end_fossil_img.jpg"
+    }
+}

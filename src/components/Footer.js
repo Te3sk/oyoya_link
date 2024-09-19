@@ -1,10 +1,13 @@
-import React from 'react'
-
+import React from "react";
 
 export default function Footer() {
   return (
-    <div className='absolute inset-x-0 bottom-0 bg-black h-1/6 flex items-center justify-center mt-3'>
-      <p className='text-white'>pisello</p>
-    </div>
-  )
+    <footer
+      className={`fixed bottom-0 left-0 w-full bg-black transition-all duration-300 h-16 border-t-2 border-white`}
+    >
+      <div className="container mx-auto h-full flex flex-col items-center justify-center text-white">
+        <p>&copy; 2024 Oyoya</p>
+      </div>
+    </footer>
+  );
 }

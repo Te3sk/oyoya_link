@@ -1,0 +1,25 @@
+{
+    "mainDiv": {
+      "desktop": "",
+      "mobile": "relative flex flex-col h- screen w-screen bg-black"
+    },
+    "header": {
+      "mainHeader": {
+        "desktop": "",
+        "mobile": "w-screen my-8 flex h-1/6 justify-center items-center"
+      },
+      "headerLogo": {
+        "desktop": "",
+        "mobile": "w-1/2"
+      }
+    },
+    "mainBody": {},
+    "footer": {},
+    "box" : {
+        "mainBox" : {
+            "desktop" : "",
+            "mobile" : "relative border-2 border-amber-300 h-20 w-11/12 m-3 flex flex-row items-center"
+        }
+    }
+
+}

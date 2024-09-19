@@ -1,12 +1,36 @@
 {
-    "Oyoya_party" : {
-        "title" : "Oyoya Party: Flipper & Friend",
-        "link" : "https://open.spotify.com/playlist/67BNVw2n4VVprcukhXIUMP?si=5b7244e161304460",
-        "img_path" : "assets/playlist_img/oyoya_party_img.jpg" 
+    "Events" : {
+        "title" : {
+            "date" : "yyyy-mm-dd",
+            "place" : "place",
+            "img" : "../assets/logo_white on black.png",
+            "link" : "link"
+        },
+        "Oyoya_party" : {
+            "date" : "2024-01-06",
+            "place" : "villa a Pisa",
+            "img" : "/src/assets/events_img/something",
+            "link" : "link"
+        },
+        "End_fossil" : {
+            "date" : "2024-??-??",
+            "place" : "Exploit",
+            "img" : "/src/assets/events_img/something",
+            "link" : "link"
+        }
     },
-    "End_fossil" : {
-        "title" : "Oyoya x Exploit: End Fossil",
-        "link" : "https://open.spotify.com/playlist/1t0X3GBOBCL3TV0vwn0gCo?si=17fa4709cd67467c",
-        "img_path" : "assets/playlist_img/end_fossil_img.jpg"
+    "Playlists" : {
+        "title" : {
+            "title" : "title",
+            "link" : "link",
+            "img_path" : "img_path"
+        }
+    },
+    "Radios" : {
+        "title" : {
+            "title" : "title",
+            "link" : "link",
+            "img_path" : "img_path"
+        }
     }
 }

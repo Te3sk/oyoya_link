@@ -1,7 +1,7 @@
 import React from "react";
 import img_oyoyaParty from "../assets/playlist_img/oyoya_party_img.jpg";
 import img_endFossil from "../assets/playlist_img/end_fossil_img.jpg";
-import db from "../components/dbLinks.json";
+import db from "./dbLinks.json";
 
 function Box({ title, link, img_path }) {
   const handleClick = () => {
@@ -31,11 +31,12 @@ function Box({ title, link, img_path }) {
   );
 }
 
-export default function MainBody() {
+export default function EventView() {
   var events = db.Events;
   var playlists = db.Playlists;
   var radio = db.Radio;
   let temp = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
   return (
     <main className="h-screen pt-32 pb-16 bg-black text-white">
       <div className="container mx-auto px-4">
@@ -56,10 +57,10 @@ export default function MainBody() {
                 className="block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex items-center">
-                  {/* Immagine */}
+                  {/* Immagine (problema immagini) */}
                   <img
-                    src={event.img}
-                    alt={event.img}
+                    src={require("./../assets/logo_white on black.png")}
+                    alt={events[e].img}
                     className="w-32 h-32 object-cover rounded-lg"
                   />
                   {/* Testo dell'evento */}

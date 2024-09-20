@@ -3,7 +3,7 @@
         "title" : {
             "date" : "yyyy-mm-dd",
             "place" : "place",
-            "img" : "../assets/logo_white on black.png",
+            "img" : "./../assets/logo_white on black.png",
             "link" : "link"
         },
         "Oyoya_party" : {

@@ -1,4 +1,4 @@
-import logo from "../assets/logo_white on trasp (temp).png";
+import logo from "./../assets/logo_white on black.png";
 
 function Header({ isScrolled }) {
   return (

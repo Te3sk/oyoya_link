@@ -1,36 +1,67 @@
 {
-    "Events" : {
-        "title" : {
-            "date" : "yyyy-mm-dd",
-            "place" : "place",
-            "img" : "./../assets/logo_white on black.png",
-            "link" : "link"
-        },
-        "Oyoya_party" : {
-            "date" : "2024-01-06",
-            "place" : "villa a Pisa",
-            "img" : "/src/assets/events_img/something",
-            "link" : "link"
-        },
-        "End_fossil" : {
-            "date" : "2024-??-??",
-            "place" : "Exploit",
-            "img" : "/src/assets/events_img/something",
-            "link" : "link"
-        }
+  "Events": {
+    "Oyoya_party": {
+      "date": "2024-01-06",
+      "place": "villa a Pisa",
+      "img": "/src/assets/events_img/something",
+      "link": "./../assets/oyoya_party_img.jpg"
     },
-    "Playlists" : {
-        "title" : {
-            "title" : "title",
-            "link" : "link",
-            "img_path" : "img_path"
-        }
+    "End_fossil": {
+      "date": "2024-03-23",
+      "place": "Exploit",
+      "img": "/src/assets/events_img/something",
+      "link": "./../assets/end_fossil_img.jpg"
     },
-    "Radios" : {
-        "title" : {
-            "title" : "title",
-            "link" : "link",
-            "img_path" : "img_path"
-        }
+    "River_side": {
+      "date": "2024-07-10",
+      "place": "River Side, Pisa",
+      "img": "",
+      "link": ""
+    },
+    "Spiaggette_2024": {
+      "date": "2024-08-15",
+      "place": "Colognole, Pisa",
+      "img": "",
+      "link": ""
+    },
+    "Oyoya_mixed_#1": {
+      "date": "2024-10-17",
+      "place": "Deposito Pontecorvo, Pisa",
+      "img": "",
+      "link": ""
     }
+  },
+  "Playlists": {
+    "title": {
+      "title": "title",
+      "link": "link",
+      "img_path": "img_path"
+    }
+  },
+  "Radios": {
+    "Flipper b2b Speed": {
+      "link": "https://youtu.be/W7n3lX6EWOw?si=lkpTiGgFMcZ5mXYp",
+      "img": "",
+      "data": "2024-06-01"
+    },
+    "Gatteski b2b La Cicala": {
+      "link": "https://youtu.be/Yl_A0bAAV1Q?si=f-dlaH4yZV6WBYir",
+      "img": "",
+      "data": "2024-08-22"
+    }
+  },
+  "Links": {
+    "Instagram": {
+      "link": "https://www.instagram.com/oyoya.music?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+      "img": "https://img.icons8.com/?size=100&id=32323&format=png&color=000000"
+    },
+    "Telegram": {
+      "link": "https://t.me/+cyVEBMHRvpg1NWQ0",
+      "img": "https://img.icons8.com/color/48/telegram-app--v1.png"
+    },
+    "Spotify": {
+      "link": "",
+      "img": "https://img.icons8.com/fluency/48/spotify.png"
+    }
+  }
 }

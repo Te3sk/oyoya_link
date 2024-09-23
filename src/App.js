@@ -5,13 +5,16 @@ import { useState, useEffect } from "react";
 import styles from "./components/styles.json";
 // images
 import logo from "./assets/logo_white on black.png";
-import oyoya_logo from "./assets/playlist_img/end_fossil_img.jpg";
-import img_oyoyaParty from "./assets/playlist_img/oyoya_party_img.jpg";
+import oyoya_logo from "./assets/end_fossil_img.jpg";
+import img_oyoyaParty from "./assets/oyoya_party_img.jpg";
 // components
 // import Header from "./components/Header";
 import Footer from "./components/Footer";
 import EventView from "./components/EventView";
 import HomeView from "./components/HomeView";
+import RadioView from "./components/RadioView";
+
+// TODO - settare date in app (eventi, radio e altro) da com'è scritto (da yyyy-mm-dd a una visione decente)
 
 function App() {
   // SCROLLING
@@ -45,6 +48,8 @@ function App() {
         return <HomeView />;
       case "events":
         return <EventView />;
+      case "radios":
+        return <RadioView />;
       default:
         return <HomeView />;
     }
@@ -59,7 +64,7 @@ function App() {
   const Header = ({ isScrolled }) => {
     return (
       <header
-        className={`fixed top-0 left-0 w-full bg-black transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 bg-black transition-all duration-300 ${
           isScrolled ? "h-16" : "h-32"
         }`}
       >
@@ -83,58 +88,12 @@ function App() {
     );
   }
   return (
-    <div>
-      <Header isScrolled={isScrolled} />
+    <div className="min-h-lvh">
+      <Header isScrolled={isScrolled} className="sticky top-0 z-50" />
       {renderPage()}
       <Footer isAtBottom={isAtBottom} />
     </div>
   );
-
-  // // ! box for what ?
-  // const Box = ({ title, link, cover }) => {
-  //   const handleClick = (pl_url) => {
-  //     window.open(pl_url);
-  //   };
-
-  //   return (
-  //     <div
-  //       className="relative border-2 border-amber-300 h-20 w-11/12 m-3 flex flex-row items-center"
-  //       onClick={handleClick(link)}
-  //     >
-  //       <div className="w-16 h-16 ml-2 bg-lime-400">
-  //         {cover ? (
-  //           <img
-  //             src={cover}
-  //             alt="playlist cover"
-  //             className="w-16 h-16 object-fill"
-  //           />
-  //         ) : (
-  //           <></>
-  //         )}
-  //       </div>
-  //       <div className="m-5 w-8/12 text-lg font-bold text-white text-left absolute right-0">
-  //         {title}
-  //       </div>
-  //     </div>
-  //   );
-  // };
-  // return (
-  //   <div className="relative flex flex-col h-screen w-screen bg-black">
-  //     {/* header */}
-  //     <div className="w-screen my-8 flex h-1/6 justify-center items-center">
-  //       <div className="w-1/2">
-  //         <img src={oyoya_logo} alt="logo" />
-  //       </div>
-  //     </div>
-  //     {/* central */}
-  //     <MainBody className="flex-grow h-4/6 overflow-scroll" />
-  //     {/* bottom */}
-  //     {/* <Footer className="h-1/6 fixed bottom-0 left-0 right-0" /> */}
-  //     <div className="absolute inset-x-0 bottom-0 bg-black h-1/6 flex items-center justify-center mt-3">
-  //       <p className="text-white">pisello</p>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default App;

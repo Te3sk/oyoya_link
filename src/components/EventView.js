@@ -5,7 +5,9 @@ import db from "./dbLinks.json";
 export default function EventView() {
   var events = db.Events;
   // sort events by date
-  var eventKeys = Object.keys(events).sort((a, b) => {
+  var eventKeys = Object.keys(events)
+    .filter(key => key !== "template") 
+    .sort((a, b) => {
     const dateA = new Date(events[a].date);
     const dateB = new Date(events[b].date);
     return dateB - dateA;
@@ -40,7 +42,7 @@ export default function EventView() {
                 <div className="flex items-center">
                   {/* Immagine (problema immagini) */}
                   <img
-                    src={require("./../assets/logo_white on black.png")}
+                    src={require("./../assets/mixed#1.jpg")}
                     alt={events[e].img}
                     className="w-32 h-32 object-cover rounded-lg"
                   />

@@ -2,11 +2,9 @@ import "./App.css";
 // dependencies
 import { useState, useEffect } from "react";
 // json whit all tailwindcss classname
-import styles from "./components/styles.json";
+import style from "./components/styles.json";
 // images
 import logo from "./assets/logo_white on black.png";
-import oyoya_logo from "./assets/end_fossil_img.jpg";
-import img_oyoyaParty from "./assets/oyoya_party_img.jpg";
 // components
 // import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -17,6 +15,13 @@ import RadioView from "./components/RadioView";
 // TODO - settare date in app (eventi, radio e altro) da com'è scritto (da yyyy-mm-dd a una visione decente)
 
 function App() {
+  // parse styles from json file
+  const [styles, setStyles] = useState({});
+  useEffect(() => {
+    const parsed = JSON.parse(JSON.stringify(style));
+    setStyles(parsed);
+  }, []);
+
   // SCROLLING
   // useStates to handle scrolling
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +73,7 @@ function App() {
           isScrolled ? "h-16" : "h-32"
         }`}
       >
-        <div className="container mx-auto h-full flex items-center justify-between px-4">
+        <div className={styles.divHeader}>
           <img
             src={logo}
             alt="Logo"
@@ -87,6 +92,7 @@ function App() {
       </header>
     );
   }
+
   return (
     <div className="min-h-lvh">
       <Header isScrolled={isScrolled} className="sticky top-0 z-50" />

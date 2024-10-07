@@ -1,7 +1,15 @@
 import React from "react";
 import db from "./dbLinks.json";
+import style from "./styles.json";
 
 export default function HomeView() {
+  // parse styles from json file
+  const [styles, setStyles] = React.useState({});
+  React.useEffect(() => {
+    const parsed = JSON.parse(JSON.stringify(style));
+    setStyles(parsed);
+  }, []);
+
   const links = db.Links;
   const events = db.Events;
 
@@ -29,31 +37,32 @@ export default function HomeView() {
     if (upcomingEvents.length === 0) return <></>;
 
     return (
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold">Upcoming Events</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title_big}>Upcoming Events</h1>
         {upcomingEvents.map((e) => {
           const event = events[e];
-          const event_img = event.img === "" ? "logo_white on black.png" : (event.img);
+          const block_img =
+            event.img === "" ? "logo_white on black.png" : event.img;
           return (
             <a
               key={e}
               href={event.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300"
+              className={styles.block_block}
             >
               <div className="flex items-center">
                 {/* immagine (problema immagini) */}
                 <img
-                  src={require("./../assets/" + event_img)}
+                  src={require("./../assets/" + block_img)}
                   alt={e}
-                  className="w-32 h-32 object-cover rounded-lg"
+                  className={styles.block_img}
                 />
                 {/* testo evento */}
                 <div className="ml-4 text-white">
-                  <h2 className="text-xl font-bold">{e.replace("_", " ")}</h2>
-                  <p className="text-sm">{renderDate(event.date)}</p>
-                  <p className="text-sm">{event.place}</p>
+                  <h2 className={styles.block_title}>{e.replace("_", " ")}</h2>
+                  <p className={styles.block_info}>{renderDate(event.date)}</p>
+                  <p className={styles.block_info}>{event.place}</p>
                 </div>
               </div>
             </a>
@@ -65,8 +74,8 @@ export default function HomeView() {
 
   const Link = () => {
     return (
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold"> Links </h1>
+      <div className={styles.container}>
+        <h1 className={styles.title_big}> Links </h1>
         {Object.keys(links).map((l) => {
           return (
             <a
@@ -74,15 +83,15 @@ export default function HomeView() {
               href={links[l].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-2/3 mx-auto my-5 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300"
+              className={styles.link_block}
             >
               <div className="flex items-center">
                 <img
                   src={links[l].img}
                   alt={l + " link"}
-                  className="w-16 h-16 object-cover rounded-lg"
+                  className={styles.link_img}
                 />
-                <h2 className="text-xl font-semibold ml-4">{l}</h2>
+                <h2 className={styles.link_title}>{l}</h2>
               </div>
             </a>
           );
@@ -93,7 +102,7 @@ export default function HomeView() {
 
   return (
     <div>
-      <main className="h-screen pt-32 pb-16 bg-black text-white">
+      <main className={styles.main}>
         <ChooseEvent n={10} />
         <Link />
       </main>

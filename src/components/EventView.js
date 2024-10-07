@@ -1,13 +1,21 @@
 import React from "react";
 import db from "./dbLinks.json";
 import EventDescr from "./EventDescr";
+import style from "./styles.json";
 
 export default function EventView() {
+  // parse styles from json file
+  const [styles, setStyles] = React.useState({});
+  React.useEffect(() => {
+    const parsed = JSON.parse(JSON.stringify(style));
+    setStyles(parsed);
+  }, []);
+
   const [view, setView] = React.useState("list");
 
   const changeView = (s) => {
     setView(s);
-  }
+  };
 
   const EventList = () => {
     const [events, setEvents] = React.useState([]);
@@ -36,9 +44,8 @@ export default function EventView() {
     };
 
     return (
-      <main className="h-full pt-32 pb-16 bg-black text-white">
-        <div className="container mx-auto px-4 z-0">
-          <h1 className="text-4xl font-bold px-3">Eventi</h1>
+        <div className={styles.container}>
+          <h1 className={styles.title_big}>Eventi</h1>
           <div className="flex flex-col items-center">
             {eventKeys.map((e) => {
               const event = events[e];
@@ -50,26 +57,28 @@ export default function EventView() {
                 <button
                   key={e}
                   // href={event.link}
-                  onClick={() => {changeView(e)}}
+                  onClick={() => {
+                    changeView(e);
+                  }}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300"
+                  className={styles.block_block}
                 >
                   <div className="flex items-center">
                     <img
                       src={require("./../assets/" + event_img)}
                       alt={"./../assets/" + event.img}
-                      className="w-32 h-32 object-cover rounded-lg"
+                      className={styles.block_img}
                     />
                     {/* Testo dell'evento */}
-                    <div className="ml-4 text-white">
-                      <h2 className="text-xl font-bold">
+                    <div className="ml-4 text-white text-left">
+                      <h2 className={styles.block_title}>
                         {e.replace("_", " ")}
                       </h2>
-                      <p className="text-sm px-4 py-1">
+                      <p className={styles.block_info}>
                         {renderDate(event.date)}
                       </p>
-                      <p className="text-sm">{event.place}</p>
+                      <p className={styles.block_info}>{event.place}</p>
                     </div>
                   </div>
                 </button>
@@ -77,13 +86,29 @@ export default function EventView() {
             })}
           </div>
         </div>
-      </main>
     );
   };
 
   return (
-    <div>
-      {view === "list" ? <EventList /> : <EventDescr event={view} />}
-    </div>
+    <main className={styles.main}>
+      {view === "list" ? (
+        <EventList />
+      ) : (
+        <div className="flex flex-col text-white">
+          <div className="h-30 flex flex-row justify-between items-center mx-5">
+            <h1 className={styles.title_big}>{view}</h1>
+            <button onClick={() => changeView("list")}>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/?size=100&id=AqDEb8mCIrk9&format=png&color=FFFFFF"
+                alt="delete-sign"
+              />
+            </button>
+          </div>
+          <EventDescr event={view} />
+        </div>
+      )}
+    </main>
   );
 }

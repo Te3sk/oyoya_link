@@ -1,25 +1,14 @@
 {
-    "mainDiv": {
-      "desktop": "",
-      "mobile": "relative flex flex-col h- screen w-screen bg-black"
-    },
-    "header": {
-      "mainHeader": {
-        "desktop": "",
-        "mobile": "w-screen my-8 flex h-1/6 justify-center items-center"
-      },
-      "headerLogo": {
-        "desktop": "",
-        "mobile": "w-1/2"
-      }
-    },
-    "mainBody": {},
-    "footer": {},
-    "box" : {
-        "mainBox" : {
-            "desktop" : "",
-            "mobile" : "relative border-2 border-amber-300 h-20 w-11/12 m-3 flex flex-row items-center"
-        }
-    }
-
+  "main" : "min-h-lvh pt-32 pb-16 bg-black text-white",
+  "container" : "container mx-auto px-4",
+  "divHeader" : "container mx-auto h-full flex items-center justify-between px-4",
+  "title_big" : "text-4xl font-bold",
+  "block_block" : "block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300",
+  "block_img" : "w-32 h-32 object-cover rounded-lg",
+  "block_title" : "text-xl font-bold",
+  "block_info" : "text-sm",
+  "link_block" : "block w-2/3 mx-auto my-5 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300",
+  "link_img" : "w-16 h-16 object-cover rounded-lg",
+  "link_title" : "text-xl font-semibold ml-4"
+  
 }

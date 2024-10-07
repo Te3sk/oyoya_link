@@ -14,7 +14,7 @@
     "Oyoya_party": {
       "date": "2024-01-06",
       "place": "villa a Pisa",
-      "img": "/src/assets/events_img/something",
+      "img": "oyoya_party_img.jpg",
       "link": "./../assets/oyoya_party_img.jpg",
       "hours" : "",
       "description": "",
@@ -25,7 +25,7 @@
     "End_fossil": {
       "date": "2024-03-23",
       "place": "Exploit",
-      "img": "/src/assets/events_img/something",
+      "img": "end_fossil_img.jpg",
       "link": "./../assets/end_fossil_img.jpg",
       "hours" : "",
       "description": "",
@@ -58,7 +58,7 @@
     "Oyoya_mixed_#1": {
       "date": "2024-10-17",
       "place": "Deposito Pontecorvo, Pisa",
-      "img": "./../assets/mixed#1.jpg",
+      "img": "mixed1.jpg",
       "link": "",
       "hours" : "00:00 - 05:00",
       "description": "Il nostro primo format da club, un viaggio multimediale attraverso l’intero spettro della musica elettronica.\nUno spazio nato e coltivato durante lunghe notti di back-to-back tra amici in cui ogni traccia è una gemma scovata, custodita gelosamente e liberata in un continuo botta e risposta; Una sfida simbolica tra selectors in cui a vincere è sempre il pubblico.\nMixed si basa su una forte passione condivisa, si sviluppa tramite una ricerca meticolosa e si risolve in uno scambio continuo di musica elettronica di ogni genere e provenienza.\nL’intera esperienza multimediale è completata da un sistema di visual audio-reattivi.\nMixed è il vostro modo di lasciarsi mischiare per sentirsi parte di qualcosa di più grande.",

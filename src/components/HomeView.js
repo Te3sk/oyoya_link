@@ -30,9 +30,10 @@ export default function HomeView() {
 
     return (
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold">Upcoming Events</h1>;
+        <h1 className="text-4xl font-bold">Upcoming Events</h1>
         {upcomingEvents.map((e) => {
           const event = events[e];
+          const event_img = event.img === "" ? "logo_white on black.png" : (event.img);
           return (
             <a
               key={e}
@@ -44,7 +45,7 @@ export default function HomeView() {
               <div className="flex items-center">
                 {/* immagine (problema immagini) */}
                 <img
-                  src={require("./../assets/logo_white on black.png")}
+                  src={require("./../assets/" + event_img)}
                   alt={e}
                   className="w-32 h-32 object-cover rounded-lg"
                 />

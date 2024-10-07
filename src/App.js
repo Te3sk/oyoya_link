@@ -73,7 +73,7 @@ function App() {
           isScrolled ? "h-16" : "h-32"
         }`}
       >
-        <div className={styles.divHeader}>
+        <div className="container mx-auto h-full flex items-center justify-between px-4">
           <img
             src={logo}
             alt="Logo"

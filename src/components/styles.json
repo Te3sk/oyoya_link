@@ -3,6 +3,7 @@
   "container" : "container mx-auto px-4",
   "divHeader" : "container mx-auto h-full flex items-center justify-between px-4",
   "title_big" : "text-4xl font-bold",
+  "title_medium" : "w-full text-3xl font-bold ml-5",
   "block_block" : "block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300",
   "block_img" : "w-32 h-32 object-cover rounded-lg",
   "block_title" : "text-xl font-bold",

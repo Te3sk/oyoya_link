@@ -23,9 +23,9 @@ export default function RadioView() {
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title_big}>Episodi Radio</h1>
+    <main className="min-h-lvh pt-32 pb-16 bg-black text-white">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold">Episodi Radio</h1>
         <div className="flex flex-col items-center">
           {radiosKeys.map((r) => {
             const radio = radios[r];
@@ -37,17 +37,17 @@ export default function RadioView() {
                 href={radio.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={styles.block_block}
+                className="block w-5/6 mx-auto my-8 p-4 bg-slate-900 rounded-lg transform hover:scale-105 transition-transform duration-300"
               >
                 <div className="flex items-center">
                   <img
                     src={require("./../assets/" + radio_img)} 
                     alt={r + " radio"}
-                    className={styles.block_img}
+                    className="w-32 h-32 object-cover rounded-lg"
                   />
                   <div className="ml-4 text-white">
-                    <h2 className={styles.block_title}>{r}</h2>
-                    <p className={styles.block_info}>
+                    <h2 className="text-xl font-bold">{r}</h2>
+                    <p className="text-sm">
                       {renderDate(radio.data)}
                     </p>
                   </div>

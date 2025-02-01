@@ -1,5 +1,5 @@
 import React from "react";
-import db from "./dbLinks.json";
+import db from "../dbLinks.json";
 import style from "./styles.json";
 import EventDescr from "./EventDescr";
 

@@ -11,7 +11,7 @@ export default function Radio() {
 
 
   return (
-    <div className="min-h-lvh p-[10px] flex flex-col items-center">
+    <div className="min-h-lvh p-[10px] flex flex-col items-center my-[50px]">
       {/* youtube button */}
       <div className="m- [10px]">
         <button className="bg-red-600 text-white p-[10px] w-[200px] flex flex-row items-center justify-center rounded-lg" onClick={() => window.open("https://www.youtube.com/@oyoyamusic")}>

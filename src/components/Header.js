@@ -1,7 +1,5 @@
 import React from "react";
 
-import dbstyles from "./styles.json"
-
 export default function Header({setPage}) {
   var styles = {
     "main_container" : 'h-[180px] w-lvh flex flex-col bg-oyoya-purple',

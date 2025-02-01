@@ -36,7 +36,7 @@ export default function Home({setPage}) {
     <div>
       {/* Se ci sono eventi prossimi mostra una card */}
       {ue ? (
-        <div className="flex flex-col items-center my-[20px]">
+        <div className="flex flex-col items-center my-[50px]">
           <h1 className="text-2xl font-maru font-extrabold text-oyoya-purple">
             Upcoming Events
           </h1>

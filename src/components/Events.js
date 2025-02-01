@@ -11,7 +11,7 @@ export default function Events() {
   });
 
   return (
-    <div className="min-h-lvh p-[10px] flex flex-col items-center">
+    <div className="min-h-lvh p-[10px] flex flex-col items-center my-[50px]">
       {events.map(([title, event], index) => {
         if (title === "template") return null;
         else

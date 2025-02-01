@@ -3,8 +3,15 @@ import React from "react";
 import dbstyles from "./styles.json"
 
 export default function Header({setPage}) {
+  var styles = {
+    "main_container" : 'h-[180px] w-lvh flex flex-col bg-oyoya-purple',
+    "logo_title_container" : 'w-full h-[70%] flex flex-row items-center justify-between',
+    "logo" : 'w-[30%] flex flex-row items-center justify-center',
+    "scritta" : "flex w-[70%] justify-center pr-[30px] pt-[15px] font-maru text-6xl font-extrabold text-oyoya-yellow",
+    "menu" : "w-full h-[30%] px-[10px] flex flex-row items-center justify-around text-oyoya-yellow text-lg font-semibold",
+    "menu_item" : "w-[0px] h-[70%] border-[1.5px] border-oyoya-yellow"
+  };
 
-  const styles = dbstyles.header;
 
   return (
     <div className={styles.main_container}>

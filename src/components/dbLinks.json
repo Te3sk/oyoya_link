@@ -135,5 +135,15 @@
       "link": "",
       "img": "https://img.icons8.com/fluency/48/spotify.png"
     }
+  },
+  "Texts" : {
+    "main-bio-1" : {
+      "ita" : "Oyoya è una piattaforma multidisciplinare nata a Pisa il 6 gennaio 2023, dedicata alla musica elettronica, all’arte multimediale e alla creazione di connessioni tra le persone. Fonde suoni, immagini ed emozioni trasformando ogni evento in un’esperienza immersiva, unendo musica elettronica e arti visive per creare spazi in cui l’aggregazione e la condivisione siano parte integrante dell’arte stessa.",
+      "eng" : "Oyoya is a multidisciplinary platform born in Pisa (PI, Italy) on January 6, 2023, dedicated to electronic music, multimedia art, and bringing people together. It merges sound, visuals, and emotions, turning every event into an immersive experience, blending electronic music and visual arts to create spaces where connection and sharing become an integral part of the art itself."
+    },
+    "main-bio-2" : {
+      "ita" : "Vogliamo essere un punto di riferimento per chi cerca un’esperienza artistica autentica, dove la qualità della musica e delle arti visive si fonda con un’atmosfera di libertà e positività. Creiamo spazi di aggregazione e divertimento per i giovani, offrendo un’alternativa reale alla monotonia e alla superficialità che spesso dominano la scena italiana. Con Oyoya, musica di qualità e inclusività vanno di pari passo, per costruire una comunità viva e dinamica.",
+      "eng" : "We strive to be a reference point for those seeking an authentic artistic experience, where high-quality music and visual arts meet a free and uplifting atmosphere. We create spaces for young people to gather and have fun, offering a real alternative to the monotony and superficiality that often dominate the Italian scene. With Oyoya, quality music and inclusivity go hand in hand, building a vibrant and dynamic community."
+    }
   }
 }

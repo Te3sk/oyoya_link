@@ -1,18 +1,18 @@
 import React from 'react'
 // import oyoya_logo from "./assets/oyoya_logo.jpg";
 
-export default function Card({ type, img_src, title, description, date, place, hours, price, location, location_link, link }) {
+export default function Card({ type, img_src, title, description, date, place, hours, price, location, location_link, link, setPage }) {
 
   // TODO - non renderizza le immagini
   // image placeholder
   if (!img_src) img_src = "assets/oyoya_logo.jpg";
   else img_src = "assets/" + img_src;
 
-  var card_type = type
+  var formatted_title = title;
 
   // title formatting
   while (title.indexOf("_") > 0) {
-    title = title.replace("_", " ");
+    formatted_title = title.replace("_", " ");
   }
 
   var subtitle = date, text;
@@ -27,7 +27,7 @@ export default function Card({ type, img_src, title, description, date, place, h
   }
 
     return (
-        <div className="bg-oyoya-purple/40 h-[325px] w-[250px] mt-[15px] rounded-lg shadow-lg flex flex-col items-center">
+        <div onClick={() => {setPage(title)}} className="bg-oyoya-purple/40 h-[325px] w-[250px] mt-[15px] rounded-lg shadow-lg flex flex-col items-center">
           {/* image */}
           <div className="bg-white w-[180px] h-[180px] mt-[15px] rounded-lg">
             <img
@@ -39,7 +39,7 @@ export default function Card({ type, img_src, title, description, date, place, h
           {/* writings container */}
           <div className="m-[10px] text-center">
             {/* TITLE */}
-            <h1 className="font-maru text-xl font-semibold text-oyoya-purple">{title}</h1>
+            <h1 className="font-maru text-xl font-semibold text-oyoya-purple">{formatted_title}</h1>
             {/* SUBTITLE */}
             <p className="text-[10px] my-[7px]">{subtitle}</p>
             {/* TEXT */}

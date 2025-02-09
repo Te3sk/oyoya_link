@@ -35,8 +35,7 @@ export default function Header({setPage}) {
         {/* <button onClick={() => setPage("playlist")}>Playlist</button> */}
         <button onClick={() => setPage("wip")}>Playlist</button>
         <div className={styles.menu_item}/>
-        {/* <button onClick={() => setPage("aboutus")}>About Us</button> */}
-        <button onClick={() => setPage("wip")}>About Us</button>
+        <button onClick={() => setPage("about")}>About Us</button>
       </div>
     </div>
   );

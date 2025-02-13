@@ -33,7 +33,7 @@ export default function Home({setPage}) {
   var ue = upcomingEvent();
 
   return (
-    <div>
+    <div className="h-[calc(100%-300px)]">
       {/* Se ci sono eventi prossimi mostra una card */}
       {ue ? (
         <div className="flex flex-col items-center my-[50px]">

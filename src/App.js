@@ -33,7 +33,7 @@ function App() {
   } 
 
   return (
-    <div className="flex flex-col justify-stretch">
+    <div className="flex flex-col justify-stretch w-screen">
       <div className="">
         <Header setPage = {setPage}/>
       </div>
@@ -45,6 +45,7 @@ function App() {
         {page === "about" ? <AboutUs setPage = {setPage} /> : null}
         {page === "wip" ? <Wip setPage = {setPage} /> : null}
         {/* {page !== "" ? <SinglePage page={page} setPage={setPage} /> : null} */}
+        {page}
       </div>
       <div className="h-[150px]">
         <Footer />

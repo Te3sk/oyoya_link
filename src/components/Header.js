@@ -1,8 +1,20 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Header({ setPage }) {
+export default function Header({ page, setPage }) {
   const [menu, setMenu] = useState(false);
+
+  const closedToggle = {
+    "1" : "bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left",
+    "2" : "bg-oyoya-yellow h-[2px] w-7 rounded transform transition-all duration-300",
+    "3" : "bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left"
+  }
+
+  const openToggle = {
+    "1" : "bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg] group-focus:w-2/3 delay-150",
+    "2" : "bg-oyoya-yellow h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10",
+    "3" : "bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg] group-focus:w-2/3 delay-150"
+  }
 
 
   var styles = {
@@ -38,11 +50,11 @@ export default function Header({ setPage }) {
           </h1>
           {/* TOGGLE MENU */}
           <button onClick={() => {menu ? setMenu(false) : setMenu(true)}} class="relative group">
-            <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200">
+            <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all ring-oyoya-purple hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200">
               <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden group-focus:-translate-x-1.5 group-focus:rotate-180">
-                <div class="bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg] group-focus:w-2/3 delay-150"></div>
-                <div class="bg-oyoya-yellow h-[2px] w-7 rounded transform transition-all duration-300 group-focus:translate-x-10"></div>
-                <div class="bg-oyoya-yellow h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg] group-focus:w-2/3 delay-150"></div>
+                <div class={!menu ? closedToggle[1] : openToggle[1]}></div>
+                <div class={!menu ? closedToggle[2] : openToggle[2]}></div>
+                <div class={!menu ? closedToggle[3] : openToggle[3]}></div>
               </div>
             </div>
           </button>
@@ -52,11 +64,11 @@ export default function Header({ setPage }) {
       {/* TODO: h-calc... non funziona, capire come fare */}
       {menu ? 
       <div className="bg-red-300 h-[calc(100%-100px)] w-[50%] absolute top-[200px] right-0 flex flex-col px-[30px] shadow-2xl">
-        <button className={styles.menu_item} onClick={() => {setPage("home"); setMenu(false);}}>Home</button>
-        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("events"); setMenu(false);}}>Events</button>
-        <button className={styles.menu_item} onClick={() => {setPage("radio"); setMenu(false);}}>Radio</button>
-        <button className={styles.menu_item} onClick={() => {setPage("wip"); setMenu(false);}}>Playlist</button>
-        <button className={styles.menu_item} onClick={() => {setPage("about"); setMenu(false);}}>About Us</button>
+        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("home"); setMenu(false);console.log(page)}}>Home</button>
+        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("events"); setMenu(false); console.log(page)}}>Events</button>
+        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("radio"); setMenu(false);console.log(page)}}>Radio</button>
+        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("wip"); setMenu(false);console.log(page)}}>Playlist</button>
+        <button className={styles.menu_item} onClick={(e) => {e.preventDefault(); setPage("about"); setMenu(false);console.log(page)}}>About Us</button>
       </div> 
       : null
       }

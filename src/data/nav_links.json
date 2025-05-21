@@ -1,0 +1,7 @@
+{
+    "1": { "path": "/", "key": "home" },
+    "2": { "path": "/eventi", "key": "eventi" },
+    "3": { "path": "/radio", "key": "radio" },
+    "4": { "path": "/about-us", "key": "chiSiamo" },
+    "5": { "path": "/contatti", "key": "contatti" }
+}

@@ -1,0 +1,59 @@
+{
+    "0000": {
+        "title": "Template Radio Title",
+        "link": "template link",
+        "img": "template image",
+        "data": "template date",
+        "description": "template description"
+    },
+    "0001": {
+        "title": "Flipper b2b Speed",
+        "link": "https://youtu.be/W7n3lX6EWOw?si=lkpTiGgFMcZ5mXYp",
+        "img": "0001_radio1.jpg",
+        "data": "2024-06-01",
+        "description": {
+            "it": "Flipper e Speed suonano b2b per 4 ore durante un house-party diurno e notturno per amici e famiglia",
+            "en": "Flipper and Speed goes b2b for 4 hours during a day to night house-party for friends and family"
+        }
+    },
+    "0002": {
+        "title": "Gatteski b2b La Cicala",
+        "link": "https://youtu.be/Yl_A0bAAV1Q?si=f-dlaH4yZV6WBYir",
+        "img": "0002_radio2.jpg",
+        "data": "2024-08-22",
+        "description": {
+            "it": "Gatteski e La Cicala in b2b portano techno rollers di alta qualità e groove dub-tech pazzeschi",
+            "en": "Gatteski and La Cicala in b2b bringing hi-quality techno rollers and sick dub-techy grooves"
+        }
+    },
+    "0003": {
+        "title": "Oyoya Radio - Ali.bi (Live set)",
+        "link": "https://www.youtube.com/watch?v=4Kl0t9T4i3E&t=1056s",
+        "img": "0003_radio3.jpg",
+        "data": "2024-11-05",
+        "description": {
+            "it": "Ali.bi mostra la sua prospettiva sulla musica ambient caratterizzata da splendidi paesaggi sonori, texture glitch e linee vocali rilassanti",
+            "en": "Ali.bi shows her perspective on ambient music featuring gorgeous soundscapes, glitchy textures and soothing vocal lines"
+        }
+    },
+    "0004": {
+        "title": "Oyoya Radio - Await at Motel (Live A/V)",
+        "link": "https://www.youtube.com/watch?v=DANWFpDqmec",
+        "img": "0004_radio4.jpg",
+        "data": "2024-11-29",
+        "description": {
+            "it": "Await At Motel presenta una performance audio/visiva speciale dove forme autogenerative si fondono con sonorità IDM-breakbeat",
+            "en": "Await At Motel delivers a special audio/visual performance where autogenerative shapes blends in with IDM-breaky sound"
+        }
+    },
+    "0005": {
+        "title": "Flipper - Sottobosco 001",
+        "link": "https://www.youtube.com/live/Jm1KaVXlrNo?si=iBmF9H7rmZwt-YkD",
+        "img": "0005_radio5.png",
+        "data": "2025-03-25",
+        "description": {
+            "it": "Debutto di Flipper con Oyoya Fritto FM, Mix di 1 ora",
+            "en": "Flipper's debut with Oyoya Fritto FM, 1 hour mix"
+        }
+    }
+}

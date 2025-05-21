@@ -1,0 +1,151 @@
+{
+    "0000": {
+        "title": "Template Event",
+        "date": "yyyy-mm-dd",
+        "start_time": "hh:mm",
+        "end_time": "hh:mm",
+        "location": "Name of the place",
+        "maps_link": "maps link",
+        "description": {
+            "it" : "descrizione in italiano",
+            "en" : "description in english"
+        },
+        "image": "image.jpg",
+        "lineup": [
+            "artist1",
+            "artist2",
+            "artist3",
+            "artist4"
+        ]
+    },
+    "0001": {
+        "title": "Oyoya Mixed 360°",
+        "date": "2025-05-30",
+        "start_time": "23:30",
+        "end_time": "till late",
+        "location": "Deposito Pontecorvo",
+        "maps_link": "https://maps.app.goo.gl/G8MwuW1N6rXga5DN7",
+        "description": {
+            "it" : "È l'ultimo Oyoya Mixed della stagione!\nLo festeggiamo VENERDÌ 30 al Deposito Pontecorvo con uno speciale allestimento immersivo a 360°\nPer l'occasione sarà con noi @g___lattaaaa, super selector da Milano insieme ai nostri resident: @flippervanilla @filippo_petroni_ @_nicolazena\nVi aspettiamo <3",
+            "en" : "It's the last Oyoya Mixed of the season!\nWe're celebrating it on FRIDAY 30th at Deposito Pontecorvo with a special 360° immersive setup\nFor this occasion, we'll have @g___lattaaaa, super selector from Milan, together with our residents: @flippervanilla @filippo_petroni_ @_nicolazena\nWe're waiting for you <3"
+        },
+        "image": "0001_oyoya_mixed_360.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed",
+            "G Lattaaaa"
+        ]
+    },
+    "0002": {
+        "title": "Oyoya Party",
+        "date": "2024-01-06",
+        "start_time": "23:00",
+        "end_time": "till late",
+        "location": "Secret location, Villa a Pisa",
+        "maps_link": "0002_oyoya_party.jpg",
+        "description": {
+            "it" : "",
+            "en" : ""
+        },
+        "image": "0002_oyoya_party.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed"
+        ]
+    },
+    "0003": {
+        "title": "End Fossil",
+        "date": "2024-03-23",
+        "start_time": "23:00",
+        "end_time": "till late",
+        "location": "Exploit",
+        "maps_link": "https://maps.app.goo.gl/i6iYM89g8WK18iYA9",
+        "description": {
+            "it" : "",
+            "en" : ""
+        },
+        "image": "0003_end_fossil.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed"
+        ]
+    },
+    "0004": {
+        "title": "Oyoya Mixed #1",
+        "date": "2024-10-17",
+        "start_time": "00:00",
+        "end_time": "05:00",
+        "location": "Deposito Pontecorvo, Pisa",
+        "maps_link": "https://maps.app.goo.gl/Wb91wT1U1kRG5iQL7",
+        "description": {
+            "it" : "Il nostro primo format da club, un viaggio multimediale attraverso l'intero spettro della musica elettronica.\nUno spazio nato e coltivato durante lunghe notti di back-to-back tra amici in cui ogni traccia è una gemma scovata, custodita gelosamente e liberata in un continuo botta e risposta; Una sfida simbolica tra selectors in cui a vincere è sempre il pubblico.\nMixed si basa su una forte passione condivisa, si sviluppa tramite una ricerca meticolosa e si risolve in uno scambio continuo di musica elettronica di ogni genere e provenienza.\nL'intera esperienza multimediale è completata da un sistema di visual audio-reattivi.\nMixed è il vostro modo di lasciarsi mischiare per sentirsi parte di qualcosa di più grande.",
+            "en" : "Our first club format, a multimedia journey through the entire spectrum of electronic music.\nA space born and cultivated during long nights of back-to-back sessions among friends, where each track is a discovered gem, jealously guarded and released in a continuous call and response; A symbolic challenge between selectors where the audience always wins.\nMixed is based on a strong shared passion, develops through meticulous research, and resolves in a continuous exchange of electronic music of every genre and origin.\nThe entire multimedia experience is completed by an audio-reactive visual system.\nMixed is your way of letting yourself be mixed to feel part of something bigger."
+        },
+        "image": "0004_oyoya_mixed_1.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed"
+        ]
+    },
+    "0005": {
+        "title": "Oyoya Mixed #2",
+        "date": "2025-02-07",
+        "start_time": "00:00",
+        "end_time": "05:00",
+        "location": "Deposito Pontecorvo, Pisa",
+        "maps_link": "https://maps.app.goo.gl/Wb91wT1U1kRG5iQL7",
+        "description": {
+            "it" : "descrizione in italiano",
+            "en" : "description in english"
+        },
+        "image": "0005_oyoya_mixed_2.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed"
+        ]
+    },
+    "0006": {
+        "title": "Oyoya Bday #1",
+        "date": "2025-01-06",
+        "start_time": "23:00",
+        "end_time": "till late",
+        "location": "Secret location",
+        "maps_link": "",
+        "description": {
+            "it" : "descrizione in italiano",
+            "en" : "description in english"
+        },
+        "image": "0006_oyoya_bday_1.jpg",
+        "lineup": [
+            "Flipper",
+            "La Cicala",
+            "Fil aka Speed"
+        ]
+    },
+    "0007": {
+        "title": "ElectrOdyssey",
+        "date": "2025-05-24",
+        "start_time": "22:30",
+        "end_time": "05:00",
+        "location": "Deposito Pontecorvo, Pisa",
+        "maps_link": "https://maps.app.goo.gl/Wb91wT1U1kRG5iQL7",
+        "description": {
+            "it" : "✷ 𝗢𝘆𝗼𝘆𝗮 ✷ 𝗠𝗶𝗲𝗹𝗲 𝗱𝗶 𝗩𝗲𝘀𝗽𝗮 ✷ 𝗚𝗹𝘂𝗺𝗽𝗮𝘁 in connessione per un finale di stagione dedicato alle sfumature della musica elettronica all'insegna della collaborazione tra i progetti più giovani ospitati da Deposito Pontecorvo\n\nIngresso gratuito fino alle 00:30",
+            "en" : "✷ 𝗢𝘆𝗼𝘆𝗮 ✷ 𝗠𝗶𝗲𝗹𝗲 𝗱𝗶 𝗩𝗲𝘀𝗽𝗮 ✷ 𝗚𝗹𝘂𝗺𝗽𝗮𝘁 in connection for a final season dedicated to the shades of electronic music at the heart of collaboration between the youngest projects hosted by Deposito Pontecorvo\n\nFree entry until 00:30"
+        },
+        "image": "0007_electrodyssey.png",
+        "lineup": [
+            "La Cicala",
+            "Fil aka Speed",
+            "9000",
+            "Cado in Trance",
+            "NoLogo b2b Angry",
+            "Raidenn"
+        ]
+    }
+}

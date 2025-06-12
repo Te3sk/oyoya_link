@@ -10,20 +10,13 @@ import SingleEvent from './pages/SingleEvent';
 import Radios from './pages/Radios';
 import ChiSiamo from './pages/ChiSiamo';
 import Contatti from './pages/Contatti';
-// Pagine placeholder (da implementare successivamente)
-// const Home = () => <div className="min-h-screen bg-white text-blue-800 p-8">Home Page</div>;
-// const Eventi = () => <div className="min-h-screen bg-white text-blue-800 p-8">Eventi Page</div>;
-// const Discipline = () => <div className="min-h-screen bg-white text-blue-800 p-8">Discipline Page</div>;
-// const ChiSiamo = () => <div className="min-h-screen bg-white text-blue-800 p-8">Chi Siamo Page</div>;
-// const Contatti = () => <div className="min-h-screen bg-white text-blue-800 p-8">Contatti Page</div>;
 
 function App() {
   return (
     <Router>
-      {/* <div className="flex flex-col justify-between min-h-screen w-full overflow-x-hidden bg-white"> */}
-      <div className="flex flex-col justify-between min-h-screen w-screen bg-white overflow-x-hidden">
+      <div className="flex flex-col justify-between min-h-screen w-screen md:w-[98.958vw] 2xl:w-[99.243vw] bg-white overflow-x-hidden">
         <Header />
-        <main className="flex-grow">
+        <div className='bg-oyoya-purple/10'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/eventi" element={<Events />} />
@@ -32,7 +25,7 @@ function App() {
             <Route path="/about-us" element={<ChiSiamo />} />
             <Route path="/contatti" element={<Contatti />} />
           </Routes>
-        </main>
+        </div>
         <Footer />
       </div>
     </Router>

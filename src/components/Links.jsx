@@ -26,21 +26,21 @@ const Links = ({ size = "big" }) => {
         }
     };
 
-    // Classi dinamiche per la griglia e i blocchi
-    const gridClass = size === "small"
-    ? "grid grid-cols-2 md:grid-cols-4 gap-4 w-full"
-    : "grid grid-cols-1 md:grid-cols-2 gap-8 w-[750px]";
+    // // Classi dinamiche per la griglia e i blocchi
+    // const gridClass = size === "small"
+    // ? "grid grid-cols-2 md:grid-cols-4 gap-4 w-full"
+    // : "grid grid-cols-1 md:grid-cols-2 gap-8 w-full md:w-[750px]";
 
-    const blockClass = size === "small"
-        ? "flex flex-col items-center gap-2 justify-center rounded-xl shadow p-3 text-base font-semibold bg-oyoya-purple/75"
-        : "flex flex-row items-center gap-4 justify-center rounded-xl shadow-lg p-8 text-xl font-semibold hover:scale-105 transition-transform bg-oyoya-purple/75";
+    // const blockClass = size === "small"
+    //     ? "flex flex-col items-center gap-2 justify-center rounded-xl shadow p-3 text-base font-semibold bg-oyoya-purple/75"
+    //     : "flex flex-row items-center gap-4 justify-center rounded-xl shadow-lg p-8 text-xl font-semibold hover:scale-105 transition-transform bg-oyoya-purple/75";
 
     const iconSize = size === "small" ? 28 : 40;
 
     return (
-        <div>
-            <h1 className="text-3xl sm:text-2xl text-center font-bold mb-10 text-oyoya-purple">{t('home.title')}</h1>
-            <div className={gridClass}>
+        <div className='w-full flex flex-col items-center justify-center'>
+            <h1 className="text-2xl md:text-3xl text-center font-bold mb-10 text-oyoya-purple text-shadow-lg">{t('links.followUs')}</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-[90%] md:w-[60%]">
                 {socialsKeys.map((social) => (
                     <a
                         key={social.key}
@@ -48,14 +48,14 @@ const Links = ({ size = "big" }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={e => handleSocialClick(social.url, e)}
-                        className={blockClass}
+                        className="flex justify-center items-center gap-3 py-5 rounded-xl bg-oyoya-purple "
                     >
                         {/* Ridimensiona l'icona in base alla prop */}
                         {size === "small"
                             ? <span className="text-white">{social.icon.type({ size: iconSize, className: "text-white" })}</span>
                             : social.icon
                         }
-                        <span className="text-white">{t(`home.${social.key}`)}</span>
+                        <span className="text-white">{t(`links.${social.key}`)}</span>
                     </a>
                 ))}
             </div>

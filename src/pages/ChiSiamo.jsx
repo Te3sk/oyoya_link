@@ -7,27 +7,10 @@ const ChiSiamo = () => {
     return (
         <div className="min-h-screen w-full bg-white flex flex-col">
             {/* Hero Section */}
-            <div className="relative w-full h-[60vh] min-h-[500px]">
-                {/* Immagine di sfondo con overlay */}
-                <div className="absolute inset-0">
-                    <img
-                        src="/assets/about-us-hero.JPG"
-                        alt="Oyoya Hero"
-                        className="w-full h-full object-cover"
-                        onError={e => { e.target.onerror = null; e.target.src = '/assets/oyoya_logo.jpg'; }}
-                    />
-                    <div className="absolute inset-0 bg-oyoya-purple/30"></div>
-                </div>
-                
-                {/* Contenuto Hero */}
-                <div className="relative h-full flex flex-col items-center justify-center gap-4">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white text-center px-4">
-                        {t('chiSiamo.heroTitle')}
-                    </h1>
-                    <h2 className="text-xl md:text-2xl text-white/90 text-center px-4 max-w-2xl">
-                        {t('chiSiamo.heroSubtitle')}
-                    </h2>
-                </div>
+            <div className='w-full h-[400px] md:h-[500px] space-y-7 md:space-y-14 p-8 bg-cover bg-center flex flex-col items-center justify-center bg-[url(/assets/about-us-hero.JPG)]'>
+                <h1 className="hidden">{t('chiSiamo.title')}</h1>
+                <p className="w-full md:w-[60%] text-[35px] md:text-7xl text-center font-bold text-white text-shadow-lg text-shadow-oyoya-purple/75">{t('chiSiamo.title')}</p>
+                <p className="text-lg md:text-xl text-center font-bold text-white text-shadow-md text-shadow-oyoya-purple/75">{t('chiSiamo.subtitle')}</p>
             </div>
 
             {/* Strip divisoria */}

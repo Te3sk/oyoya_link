@@ -5,7 +5,12 @@ const resources = {
   it: {
     translation: {
       home: {
-        title: 'Seguici sui nostri canali',
+        heroTitle1: 'Connessioni d\'Arte',
+        heroTitle2: 'Ritmiche, Visive, Umane',
+        heroSubtitle: 'Fondi l\'energia della musica elettronica con la forza dell\'arte multimediale in spazi di libertà, divertimento e condivisione.',
+      },
+      links: {
+        followUs: 'Seguici sui nostri canali',
         instagram: 'Instagram',
         youtube: 'YouTube',
         telegram: 'Telegram',
@@ -13,11 +18,15 @@ const resources = {
         whatsapp: 'WhatsApp',
       },
       eventi: {
-        title: 'Eventi',
+        title: 'La Nostra Collezione di Eventi Immersivi',
+        subtitle: 'Dalle esperienze che hanno segnato la nostra storia alle prossime avventure che stiamo plasmando per te.',
+        cta: "Scopri tutti gli eventi",
         soon: 'Questa sezione sarà presto disponibile!'
       },
       radios: {
-        title: 'Radio',
+        title: 'Un Archivio di Suoni e Visioni',
+        subtitle: 'Immergiti nelle nostre sessioni esclusive: dj set, live set e performance audio-visuali curate da artisti Oyoya e ospiti speciali.',
+        cta: 'Sintonizzati sull\'Esperienza',
         soon: 'Questa sezione sarà presto disponibile!'
       },
       nav: {
@@ -38,11 +47,11 @@ const resources = {
         desc: 'Stiamo lavorando per voi.\nQuesta sezione sarà presto disponibile.'
       },
       chiSiamo: {
-        heroTitle: 'OYOYA, Ritmo, Visione',
-        heroSubtitle: 'Dove la musica elettronica incontra l\'arte e si fa rito',
+        title: 'OYOYA, Ritmo, Visione',
+        subtitle: 'Dove la musica elettronica incontra l\'arte e si fa rito',
         content: {
-          "main-bio-1": "Oyoya è una piattaforma multidisciplinare nata a Pisa il 6 gennaio 2023, dedicata alla musica elettronica, all’arte multimediale e alla creazione di connessioni tra le persone. Fonde suoni, immagini ed emozioni trasformando ogni evento in un’esperienza immersiva, unendo musica elettronica e arti visive per creare spazi in cui l’aggregazione e la condivisione siano parte integrante dell’arte stessa.",
-          "main-bio-2": "Vogliamo essere un punto di riferimento per chi cerca un’esperienza artistica autentica, dove la qualità della musica e delle arti visive si fonda con un’atmosfera di libertà e positività. Creiamo spazi di aggregazione e divertimento per i giovani, offrendo un’alternativa reale alla monotonia e alla superficialità che spesso dominano la scena italiana. Con Oyoya, musica di qualità e inclusività vanno di pari passo, per costruire una comunità viva e dinamica."
+          "main-bio-1": "Oyoya è una piattaforma multidisciplinare nata a Pisa il 6 gennaio 2023, dedicata alla musica elettronica, all'arte multimediale e alla creazione di connessioni tra le persone. Fonde suoni, immagini ed emozioni trasformando ogni evento in un'esperienza immersiva, unendo musica elettronica e arti visive per creare spazi in cui l'aggregazione e la condivisione siano parte integrante dell'arte stessa.",
+          "main-bio-2": "Vogliamo essere un punto di riferimento per chi cerca un'esperienza artistica autentica, dove la qualità della musica e delle arti visive si fonda con un'atmosfera di libertà e positività. Creiamo spazi di aggregazione e divertimento per i giovani, offrendo un'alternativa reale alla monotonia e alla superficialità che spesso dominano la scena italiana. Con Oyoya, musica di qualità e inclusività vanno di pari passo, per costruire una comunità viva e dinamica."
         },
         closing_quote: "La nostra arte è fatta di corpi, frequenze e visioni condivise"
       },
@@ -52,7 +61,12 @@ const resources = {
   en: {
     translation: {
       home: {
-        title: 'Follow us on our channels',
+        heroTitle1: 'Art Connections',
+        heroTitle2: 'Rhythmic, Visual, Human',
+        heroSubtitle: 'Blend the energy of electronic music with the power of multimedia art in spaces of freedom, fun and sharing.',
+      },
+      links: {
+        followUs: 'Follow us on our channels',
         instagram: 'Instagram',
         youtube: 'YouTube',
         telegram: 'Telegram',
@@ -60,11 +74,15 @@ const resources = {
         whatsapp: 'WhatsApp',
       },
       eventi: {
-        title: 'Events',
+        title: 'Our Immersive Events Collection',
+        subtitle: 'From the experiences that have marked our history to the next adventures we are shaping for you.',
+        cta: "Discover all events",
         soon: 'This section will be available soon!'
       },
       radios: {
-        title: 'Radios',
+        title: 'An Archive of Sounds and Visions',
+        subtitle: 'Immerse yourself in our exclusive sessions: dj sets, live sets and audio-visual performances curated by Oyoya artists and special guests.',
+        cta: 'Tune in to the Experience',
         soon: 'This section will be available soon!'
       },
       nav: {
@@ -85,8 +103,8 @@ const resources = {
         desc: 'We are working for you.\nThis section will be available soon.'
       },
       chiSiamo: {
-        heroTitle: 'OYOYA, Rhythm, Vision',
-        heroSubtitle: 'Where electronic music meets art and becomes a ritual',
+        title: 'OYOYA, Rhythm, Vision',
+        subtitle: 'Where electronic music meets art and becomes a ritual',
         content: {
           "main-bio-1": "Oyoya is a multidisciplinary platform born in Pisa (PI, Italy) on January 6, 2023, dedicated to electronic music, multimedia art, and bringing people together. It merges sound, visuals, and emotions, turning every event into an immersive experience, blending electronic music and visual arts to create spaces where connection and sharing become an integral part of the art itself.",
           "main-bio-2": "We strive to be a reference point for those seeking an authentic artistic experience, where high-quality music and visual arts meet a free and uplifting atmosphere. We create spaces for young people to gather and have fun, offering a real alternative to the monotony and superficiality that often dominate the Italian scene. With Oyoya, quality music and inclusivity go hand in hand, building a vibrant and dynamic community."

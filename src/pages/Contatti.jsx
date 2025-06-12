@@ -22,46 +22,68 @@ const Contatti = () => {
     const [privacy, setPrivacy] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
+    const [sectionError, setSectionError] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const missingFields = [];
+        // const missingFields = [];
 
-        const requiredFields = [
-            { value: name, name: 'Nome completo' },
-            { value: subject, name: 'Oggetto' },
-            { value: category, name: 'Categoria' },
-            { value: message, name: 'Messaggio' },
-        ];
+        // const requiredFields = [
+        //     { value: name, name: 'Nome completo' },
+        //     { value: subject, name: 'Oggetto' },
+        //     { value: category, name: 'Categoria' },
+        //     { value: message, name: 'Messaggio' },
+        // ];
 
-        requiredFields.forEach(field => {
-            if (!field.value || field.value === '') {
-                missingFields.push(field.name);
-            }
-        });
+        // requiredFields.forEach(field => {
+        //     if (!field.value || field.value === '') {
+        //         missingFields.push(field.name);
+        //     }
+        // });
 
-        if (missingFields.length > 0) {
-            setError(`Per favore, completa tutti i campi obbligatori: ${missingFields.join(', ')}.`);
-            console.log(error);
+        // if (missingFields.length > 0) {
+        //     setError(`Per favore, completa tutti i campi obbligatori: ${missingFields.join(', ')}.`);
+        //     console.log(error);
+        //     return;
+        // }
+
+        if (!name || name === '') {
+            console.log("name error");
+            setSectionError({ section: 'name', message: 'Campo obbligatorio' });
             return;
         }
+
+        console.log('name: ', name);
 
         if (!email && !phone) {
-            setError('Inserisci almeno un contatto: email o numero di telefono.');
-            return;
-        }
-        if (email && !isValidEmail(email)) {
-            setError('Inserisci un indirizzo email valido.');
-            return;
-        }
-        if (phone && !isValidPhone(phone)) {
-            setError('Inserisci un numero di telefono valido.');
+            setSectionError({ section: 'phone', message: 'Inserisci almeno un contatto' });
+            setSectionError({ section: 'email', message: 'Inserisci almeno un contatto' });
             return;
         }
 
-        if (!privacy) {
-            setError('Per favore, autorizza il trattamento dei tuoi dati personali.');
+        if (email && !isValidEmail(email)) {
+            setSectionError({ section: 'email', message: 'Inserisci un indirizzo email valido.' });
+            return;
+        }
+
+        if (phone && !isValidPhone(phone)) {
+            setSectionError({ section: 'phone', message: 'Inserisci un numero di telefono valido.' });
+            return;
+        }
+
+        if (!category || category === '') {
+            setSectionError({ section: 'category', message: 'Campo obbligatorio' });
+            return;
+        }
+
+        if (!subject || subject === '') {
+            setSectionError({ section: 'subject', message: 'Campo obbligatorio' });
+            return;
+        }
+
+        if (!privacy) { 
+            setSectionError({ section: 'privacy', message: 'Campo obbligatorio' });
             return;
         }
 
@@ -91,6 +113,18 @@ const Contatti = () => {
         }
     };
 
+    const renderSectionError = (section) => {
+        if (sectionError && sectionError.section === section) {
+            return (
+                <div className='text-red-500 text-sm'>{sectionError.message}</div>
+            );
+        } else {
+            return (
+                <div className='text-transparent text-sm'>{sectionError.message}</div>
+            );
+        }
+    }
+
     const renderSuccess = () => {
         if (success) {
             return (
@@ -119,26 +153,26 @@ const Contatti = () => {
                 </div>
                 {/* Contenuto sopra l'immagine */}
                 <div className='relative z-10 flex flex-col justify-start h-lvh w-3/4 mr-16 p-8 gap -20 items-end text-right'>
-                    
-                        <h1 className='text-3xl sm:text-2xl font-bold mb-2 text-oyoya-yellow'>Dal dancefloor alla inbox</h1>
-                        <h2 className='text-lg text-white my-6'>Scrivici per collaborazioni, booking, domande o solo per dire ciao!</h2>
-                        <div className='my-14'>
-                            <div className='flex items-center justify-end gap-2 mb-2'>
-                                <FaEnvelope size={20} className='text-oyoya-yellow' />
-                                {/* <span className='font-semibold text-oyoya-yellow'>Email:</span> */}
-                                <a href='mailto:info@oyoya.it'><p className='text-white underline'>oyoya.info@gmail.com</p></a>
-                            </div>
-                            <div className='flex items-center justify-end gap-2 mb-1'>
-                                <FaPhone size={20} className='text-oyoya-yellow' />
-                                {/* <span className='font-semibold text-oyoya-yellow'>Telefono 1:</span> */}
-                                <a href='tel:+391234567890'><p className='text-white'>+39 123 456 7890</p></a>
-                            </div>
-                            <div className='flex items-center justify-end gap-2'>
-                                <FaPhone size={20} className='text-oyoya-yellow' />
-                                {/* <span className='font-semibold text-oyoya-yellow'>Telefono 2:</span> */}
-                                <a href='tel:+390987654321'><p className='text-white'>+39 098 765 4321</p></a>
-                            </div>
+
+                    <h1 className='text-3xl sm:text-2xl font-bold mb-2 text-oyoya-yellow'>Dal dancefloor alla inbox</h1>
+                    <h2 className='text-lg text-white my-6'>Scrivici per collaborazioni, booking, domande o solo per dire ciao!</h2>
+                    <div className='my-14'>
+                        <div className='flex items-center justify-end gap-2 mb-2'>
+                            <FaEnvelope size={20} className='text-oyoya-yellow' />
+                            {/* <span className='font-semibold text-oyoya-yellow'>Email:</span> */}
+                            <a href='mailto:info@oyoya.it'><p className='text-white underline'>oyoya.info@gmail.com</p></a>
                         </div>
+                        <div className='flex items-center justify-end gap-2 mb-1'>
+                            <FaPhone size={20} className='text-oyoya-yellow' />
+                            {/* <span className='font-semibold text-oyoya-yellow'>Telefono 1:</span> */}
+                            <a href='tel:+391234567890'><p className='text-white'>+39 123 456 7890</p></a>
+                        </div>
+                        <div className='flex items-center justify-end gap-2'>
+                            <FaPhone size={20} className='text-oyoya-yellow' />
+                            {/* <span className='font-semibold text-oyoya-yellow'>Telefono 2:</span> */}
+                            <a href='tel:+390987654321'><p className='text-white'>+39 098 765 4321</p></a>
+                        </div>
+                    </div>
                     <div className='mb-4 mt-48'>
                         <h3 className='text-base font-semibold text-oyoya-yellow mb-2'>Seguici sui nostri canali</h3>
                         <div className='flex justify-end gap-4'>
@@ -157,7 +191,7 @@ const Contatti = () => {
             </div>
             {/* Colonna destra: form */}
             <div className='w-full md:w-1/2 flex flex-col justify-center mb-24 mt-10 px-4 max-w-2xl mx-auto'>
-                {error ? renderError() : (success ? renderSuccess() : <div className='h-[60px]'></div>)}
+                {/* {error ? renderError() : (success ? renderSuccess() : <div className='h-[60px]'></div>)} */}
                 <form onSubmit={handleSubmit} className="w-full max-w-2xl">
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-2">
@@ -167,10 +201,11 @@ const Contatti = () => {
                             <input
                                 type="text"
                                 id="fullName"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
                                 value={name}
                                 onChange={e => setName(e.target.value)}
                             />
+                            {renderSectionError('name')}
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -180,10 +215,11 @@ const Contatti = () => {
                             <input
                                 type="email"
                                 id="email"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
+                            {renderSectionError('email')}
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -193,10 +229,11 @@ const Contatti = () => {
                             <input
                                 type="tel"
                                 id="phone"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
                             />
+                            {renderSectionError('phone')}
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -206,10 +243,12 @@ const Contatti = () => {
                             <input
                                 type="text"
                                 id="subject"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
                                 value={subject}
+                                // required
                                 onChange={e => setSubject(e.target.value)}
                             />
+                            {renderSectionError('subject')}
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -218,8 +257,9 @@ const Contatti = () => {
                             </label>
                             <select
                                 id="category"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple bg-white"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple"
                                 value={category}
+                                // required
                                 onChange={e => setCategory(e.target.value)}
                             >
                                 <option value="">Seleziona una categoria</option>
@@ -231,6 +271,7 @@ const Contatti = () => {
                                 <option value="domande">Domande randomiche</option>
                                 <option value="altro">Altro</option>
                             </select>
+                            {renderSectionError('category')}
                         </div>
 
                         <div className="flex flex-col gap-2">
@@ -240,31 +281,34 @@ const Contatti = () => {
                             <textarea
                                 id="message"
                                 rows="6"
-                                className="p-2 border border-gray-300 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple resize-none"
+                                className="p-2 border border-gray-400 text-gray-800 rounded-lg focus:outline-none focus:border-oyoya-purple resize-none"
                                 value={message}
                                 onChange={e => setMessage(e.target.value)}
                             ></textarea>
+                            {renderSectionError('message')}
                         </div>
 
-                        <div className="flex items-start gap-2 mt-4">
+                        <div className="flex items-center gap-4 mt-4">
                             <input
                                 type="checkbox"
                                 id="privacy"
-                                className="mt-1"
+                                className="mt-1 w-6 h-6 accent-oyoya-purple border-gray-400 rounded checked:bg-oyoya-purple focus:ring-oyoya-purple transition-colors"
+                                // required
                                 onChange={e => setPrivacy(e.target.checked)}
                             />
                             <label htmlFor="privacy" className="text-sm text-gray-600">
                                 Autorizzo il trattamento dei miei dati personali ai sensi del Decreto Legislativo 30 giugno 2003, n. 196 e del GDPR (Regolamento UE 2016/679)
                             </label>
                         </div>
+                        {renderSectionError('privacy')}
 
-                        <div
+                        <button
                             type="submit"
                             onClick={handleSubmit}
                             className="mt-6 bg-oyoya-purple text-white text-center font-semibold py-3 px-6 rounded-lg hover:bg-oyoya-purple/90 transition-colors"
                         >
                             Invia messaggio
-                        </div>
+                        </button>
                     </div>
                 </form>
             </div>

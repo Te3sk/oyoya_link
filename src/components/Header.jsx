@@ -22,7 +22,7 @@ const Header = () => {
     };
 
     return (
-        <header className="bg-oyoya-purple text-white py-4">
+        <header className="bg-oyoya-purple text-white p-4">
             <div className="container mx-auto px-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link to="/" className="flex items-center">

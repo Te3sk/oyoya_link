@@ -1,6 +1,14 @@
+// React imports
 import { useTranslation } from 'react-i18next';
-import events from '../data/events.json';
 import { useNavigate } from 'react-router-dom';
+
+// Icons imports
+import { FaArrowDown } from 'react-icons/fa';
+
+
+
+// Data imports
+import events from '../data/events.json';
 
 const Events = () => {
     const { t } = useTranslation();
@@ -21,7 +29,7 @@ const Events = () => {
         }
 
         return (
-            <div key={event.id} className="bg-oyoya-purple/10 rounded-xl shadow p-6 flex flex-col items-center w-80" onClick={() => navigate(`/eventi/${event.id}`)}>
+            <div key={event.id} className="bg-oyoya-purple/10 rounded-xl shadow p-6 flex flex-col items-center w-full md:w-80" onClick={() => navigate(`/eventi/${event.id}`)}>
                 <img
                     src={event.image === '' ? '/assets/oyoya_logo.jpg' : `/assets/events/${event.image}`}
                     alt={event.title}
@@ -43,9 +51,18 @@ const Events = () => {
     }
 
     return (
-        <div className="min-h-screen w-full bg-white flex flex-col items-center py-12 px-4">
-            <h1 className="text-3xl font-bold mb-10 text-oyoya-purple">{t('eventi.title')}</h1>
-            <div className="w-full max-w-3/4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+        <div className="min-h-screen w-full flex flex-col items-center space-y-12">
+            <div className='w-full h-[400px] md:h-[500px] space-y-7 md:space-y-14 p-8 bg-cover bg-center flex flex-col items-center justify-center bg-[url(/assets/events-hero.JPG)] mask-b-from-75% mask-b-to-100%'>
+                <h1 className="hidden">{t('eventi.title')}</h1>
+                <p className="w-full md:w-[60%] text-[35px] md:text-7xl text-center font-bold text-white text-shadow-lg text-shadow-oyoya-purple/75">{t('eventi.title')}</p>
+                <p className="text-lg md:text-xl text-center font-bold text-white text-shadow-md text-shadow-oyoya-purple/75">{t('eventi.subtitle')}</p>
+            </div>
+            <div className='w-full flex flex-col items-center justify-center gap-4'>
+                <p className='text-xl md:text-2xl text-center font-bold text-oyoya-purple'>{t('eventi.cta')}</p>
+                <FaArrowDown className='text-oyoya-purple text-2xl animate-bounce' />
+            </div>
+
+            <div className="w-fullmax-w-3/4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 place-items-center">
                 {eventsArray.map(event => renderEvent(event))}
             </div>
         </div>

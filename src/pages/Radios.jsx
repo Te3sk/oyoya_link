@@ -1,4 +1,10 @@
+// React imports
 import { useTranslation } from 'react-i18next';
+
+// Icons imports
+import { FaArrowDown } from 'react-icons/fa';
+
+// Data imports
 import radios from '../data/radios.json';
 
 const Radios = () => {
@@ -16,9 +22,9 @@ const Radios = () => {
         }
 
         return (
-            <div 
-                key={radio.id} 
-                className="bg-oyoya-purple/10 rounded-xl shadow p-6 flex flex-col items-center w-80 cursor-pointer hover:bg-oyoya-purple/20 transition-colors"
+            <div
+                key={radio.id}
+                className="bg-oyoya-purple/10 rounded-xl shadow p-6 flex flex-col items-center w-full md:w-80 cursor-pointer hover:bg-oyoya-purple/20 transition-colors"
                 onClick={() => window.open(radio.link, '_blank')}
             >
                 <img
@@ -37,9 +43,20 @@ const Radios = () => {
     }
 
     return (
-        <div className="min-h-screen w-full bg-white flex flex-col items-center py-12 px-4">
-            <h1 className="text-3xl font-bold mb-10 text-oyoya-purple">{t('radios.title')}</h1>
-            <div className="w-full max-w-3/4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+        <div className="min-h-screen w-full flex flex-col items-center space-y-12">
+            <div className='w-full h-[400px] md:h-[500px] space-y-7 md:space-y-14 p-8 bg-cover bg-center flex flex-col items-center justify-center bg-[url(/assets/radio-hero.JPG)] mask-b-from-75% mask-b-to-100%'>
+                <h1 className="hidden">{t('radios.title')}</h1>
+                <p className="w-full md:w-[60%] text-[35px] md:text-7xl text-center font-bold text-white text-shadow-lg text-shadow-oyoya-purple/75">{t('radios.title')}</p>
+                <p className="text-lg md:text-xl text-center font-bold text-white text-shadow-md text-shadow-oyoya-purple/75">{t('radios.subtitle')}</p>
+            </div>
+
+            
+            <div className='w-full flex flex-col items-center justify-center gap-4'>
+                <p className='text-xl md:text-2xl text-center font-bold text-oyoya-purple'>{t('radios.cta')}</p>
+                <FaArrowDown className='text-oyoya-purple text-2xl animate-bounce' />
+            </div>
+
+            <div className="w-full max-w-3/4 grid grid-cols-1 md:grid-cols-3 gap-10 mb-20 px-4">
                 {radiosArray.map(radio => renderRadio(radio))}
             </div>
         </div>

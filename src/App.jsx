@@ -10,6 +10,7 @@ import SingleEvent from './pages/SingleEvent';
 import Radios from './pages/Radios';
 import ChiSiamo from './pages/ChiSiamo';
 import Contatti from './pages/Contatti';
+import Admin from './pages/Admin';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/radio" element={<Radios />} />
             <Route path="/about-us" element={<ChiSiamo />} />
             <Route path="/contatti" element={<Contatti />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
         <Footer />

@@ -55,6 +55,28 @@ const resources = {
         },
         closing_quote: "La nostra arte è fatta di corpi, frequenze e visioni condivise"
       },
+      contatti : {
+        title: 'Dal dancefloor alla inbox',
+        subtitle: 'Scrivici per collaborazioni, booking, domande o solo per dire ciao!',
+        email: 'oyoya.info@gmail.com',
+        phone1: '+39 351 467 0566',
+        phone2: '+39 342 828 1283',
+        name: 'Nome completo',
+        emailLabel: 'Email',
+        phone: 'Numero di telefono',
+        subject: 'Oggetto',
+        category: 'Categoria',
+        selectCategory: 'Seleziona una categoria',
+        collab: 'Collaborazioni artistiche',
+        booking: 'Booking & ospitate',
+        venue: 'Venue e location',
+        press: 'Press & media',
+        volontariato: 'Volontariato e team',
+        domande: 'Domande randomiche',
+        message: 'Messaggio',
+        send: 'Invia messaggio',
+        privacy: 'Autorizzo il trattamento dei miei dati personali ai sensi del Decreto Legislativo 30 giugno 2003, n. 196 e del GDPR (Regolamento UE 2016/679)',
+      },
       upcomingEvents: "Prossimi Eventi"
     }
   },
@@ -110,6 +132,28 @@ const resources = {
           "main-bio-2": "We strive to be a reference point for those seeking an authentic artistic experience, where high-quality music and visual arts meet a free and uplifting atmosphere. We create spaces for young people to gather and have fun, offering a real alternative to the monotony and superficiality that often dominate the Italian scene. With Oyoya, quality music and inclusivity go hand in hand, building a vibrant and dynamic community."
         },
         closing_quote: "Our art is made of bodies, frequencies and shared visions"
+      },
+      contatti : {
+        title: 'From dancefloor to inbox',
+        subtitle: 'Write to us for collaborations, bookings or just to say hello!',
+        email: 'oyoya.info@gmail.com',
+        phone1: '+39 123 456 7890',
+        phone2: '+39 098 765 4321',
+        name: 'Full Name',
+        email: 'Email',
+        phone: 'Phone Number',
+        subject: 'Subject',
+        category: 'Category',
+        selectCategory: 'Select a category',
+        collab: 'Artistic collaborations',
+        booking: 'Bookings & hosted',
+        venue: 'Venues & locations',
+        press: 'Press & media',
+        volontariato: 'Volunteering & team',
+        domande: 'Random questions',
+        message: 'Message',
+        send: 'Send message',
+        privacy: 'I authorize the processing of my personal data in accordance with the Legislative Decree 30 June 2003, n. 196 and the GDPR (Regulation (EU) 2016/679)',
       },
       upcomingEvents: "Upcoming Events"
     }

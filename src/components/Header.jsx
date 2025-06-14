@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaGlobe } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import logo from '/assets/oyoya_logo.jpg';

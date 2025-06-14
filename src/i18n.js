@@ -77,6 +77,9 @@ const resources = {
         send: 'Invia messaggio',
         privacy: 'Autorizzo il trattamento dei miei dati personali ai sensi del Decreto Legislativo 30 giugno 2003, n. 196 e del GDPR (Regolamento UE 2016/679)',
       },
+      buttons : {
+        back: 'Indietro'
+      },
       upcomingEvents: "Prossimi Eventi"
     }
   },
@@ -154,6 +157,9 @@ const resources = {
         message: 'Message',
         send: 'Send message',
         privacy: 'I authorize the processing of my personal data in accordance with the Legislative Decree 30 June 2003, n. 196 and the GDPR (Regulation (EU) 2016/679)',
+      },
+      buttons : {
+        back: 'Back'
       },
       upcomingEvents: "Upcoming Events"
     }

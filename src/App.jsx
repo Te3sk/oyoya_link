@@ -1,4 +1,5 @@
 import './i18n';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components imports
 import Header from './components/Header';
@@ -11,8 +12,11 @@ import Radios from './pages/Radios';
 import ChiSiamo from './pages/ChiSiamo';
 import Contatti from './pages/Contatti';
 import Admin from './pages/Admin';
+// Utils imports
+import { convertUrl } from './utils/imageUtils';
 
 function App() {
+
   return (
     <Router>
       <div className="flex flex-col justify-between min-h-screen w-screen md:w-[98.958vw] 2xl:w-[99.243vw] bg-white overflow-x-hidden">
